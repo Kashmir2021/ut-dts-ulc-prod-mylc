@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     profile = "ulc-dev"
-    bucket  = "ut-ulc-dev-terraform-state"
+    bucket  = "ut-ulc-mylc-prod-terraform-state"
     key     = "applications/terraform.tfstate"
     region  = "us-west-2"
     encrypt = true
