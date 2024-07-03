@@ -95,7 +95,11 @@ module "eb_mylc" {
   security_groups           = [module.security_groups.Myulc_App]
   service_name              = "ulc-mylc-prod"
   service_description       = "Mylc Application"
-  eb_solution_stack_name    = "64bit Amazon Linux 2023 v4.2.3 running Corretto 17"
+   
+   #Check for solution stack name in here https://docs.aws.amazon.com/elasticbeanstalk/latest/platforms/platform-history-javase.html
+   #If the version is not correct the Terraform Apply can fail.
+  eb_solution_stack_name    = "64bit Amazon Linux 2023 v4.2.5 running Corretto 17"
+  
   healthcheck_response_code = "200"
   #healthcheck_url           = "/usr/share/nginx/html/index.html"
   healthcheck_url           = "/"
