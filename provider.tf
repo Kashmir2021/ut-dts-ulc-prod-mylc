@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    profile = "ulc-dev"
+    profile = "<profile name in here>"
     bucket  = "ut-ulc-mylc-prod-terraform-state"
     key     = "applications/terraform.tfstate"
     region  = "us-west-2"
@@ -9,5 +9,5 @@ terraform {
 }
 provider "aws" {
   region  = "us-west-2"
-  profile = "ulc-dev"
+  profile = "<profile name in here>"
 }
